@@ -63,9 +63,16 @@ class Middle extends School {
 
 
 class High extends School {
-    constructor(name, level, numberOfStudents, sportsTeams){
-        // Complete
-        // this._sportsTeams = sportsTeams
+    constructor(name, level="high", numberOfStudents, sportsTeams){
+        super(name);
+        super(level);
+        super(numberOfStudents);
+        this._sportsTeams = sportsTeams;
+    }
+
+    get sportsTeams(){
+        
+        this._sportsTeams.forEach(sport => console.log(sport))
     }
 }
 
