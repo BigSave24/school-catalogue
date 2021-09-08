@@ -32,7 +32,6 @@ class School {
     }
 
     static pickSubstituteTeacher(substituteTeachers){
-        // Complete
         let idx = Math.floor(Math.random() * substituteTeachers.length)
 
         return substituteTeachers[idx]
@@ -42,7 +41,6 @@ class School {
 
 class Primary extends School {
     constructor(name, level="primary", numberOfStudents, pickupPolicy){
-        // Complete
         super(name);
         super(level);
         super(numberOfStudents);
@@ -56,8 +54,10 @@ class Primary extends School {
 
 
 class Middle extends School {
-    constructor(name, level, numberOfStudents){
-        // Complete
+    constructor(name, level="middle", numberOfStudents){
+        super(name);
+        super(level);
+        super(numberOfStudents);
     }
 }
 
