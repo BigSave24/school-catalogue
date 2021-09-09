@@ -40,10 +40,8 @@ class School {
 
 
 class Primary extends School {
-    constructor(name, level="primary", numberOfStudents, pickupPolicy){
-        super(name);
-        super(level);
-        super(numberOfStudents);
+    constructor(name, numberOfStudents, pickupPolicy, level="primary"){
+        super(name, level, numberOfStudents);
         this._pickupPolicy = pickupPolicy
     }
 
@@ -54,24 +52,20 @@ class Primary extends School {
 
 
 class Middle extends School {
-    constructor(name, level="middle", numberOfStudents){
-        super(name);
-        super(level);
-        super(numberOfStudents);
+    constructor(name, numberOfStudents, level="middle"){
+        super(name, level, numberOfStudents);
     }
 }
 
 
 class High extends School {
-    constructor(name, level="high", numberOfStudents, sportsTeams){
-        super(name);
-        super(level);
-        super(numberOfStudents);
+    constructor(name, numberOfStudents, sportsTeams, level="high"){
+        super(name, level, numberOfStudents);
         this._sportsTeams = sportsTeams;
     }
 
     get sportsTeams(){
-        
+
         this._sportsTeams.forEach(sport => console.log(sport))
     }
 }
